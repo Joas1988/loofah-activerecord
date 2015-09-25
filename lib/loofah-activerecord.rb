@@ -6,7 +6,7 @@ module Loofah::ActiveRecord
   VERSION = "1.2.0"
 end
 
-if defined?(Rails) && [3,4].include?(Rails::VERSION::MAJOR)
+if defined?(Rails) && [3,4,5].include?(Rails::VERSION::MAJOR)
   require 'loofah/activerecord/railtie'
 elsif defined? Rails.configuration and Rails.configuration.frameworks.include?([:active_record]) # >= 2.1
   Rails.configuration.after_initialize do
